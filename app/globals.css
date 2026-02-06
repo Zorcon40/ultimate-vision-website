@@ -1,27 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Ultimate Vision Updated Brand Colors - Warm, Accessible, Professional */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    
+    /* Primary: Cloudy Sky - Trust & Hope */
+    --primary: 210 67% 58%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Secondary: Sweet Salmon - Warmth & Compassion */
+    --secondary: 5 90% 72%;
+    --secondary-foreground: 220 15% 20%;
+    
+    /* Accent: Light Caramel - Friendliness */
+    --accent: 30 69% 67%;
+    --accent-foreground: 220 15% 20%;
+    
+    --muted: 0 0% 98%;
+    --muted-foreground: 0 0% 40%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 210 67% 58%;
+    --radius: 0.5rem;
+    
+    /* Typography */
+    --font-nunito: 'Nunito', sans-serif;
+    --font-lora: 'Lora', serif;
+    
+    /* Accessibility - Font Size */
+    --font-size-base: 100%;
+    --line-height-base: 1.6;
+    
+    /* Chart colors */
+    --chart-1: 210 60% 40%;
+    --chart-2: 35 80% 50%;
+    --chart-3: 175 60% 40%;
+    --chart-4: 280 50% 50%;
+    --chart-5: 15 70% 55%;
+  }
+
+  /* Colorblind Modes */
+  .colorblind-protanopia {
+    --primary: 45 100% 40%;
+    --secondary: 200 50% 50%;
+    --accent: 60 80% 45%;
+    --destructive: 0 0% 30%;
+    --foreground: 0 0% 15%;
+    --muted-foreground: 0 0% 40%;
+  }
+
+  .colorblind-deuteranopia {
+    --primary: 45 100% 40%;
+    --secondary: 200 50% 50%;
+    --accent: 60 80% 45%;
+    --destructive: 0 0% 30%;
+    --foreground: 0 0% 15%;
+    --muted-foreground: 0 0% 40%;
+  }
+
+  .colorblind-tritanopia {
+    --primary: 0 60% 45%;
+    --secondary: 120 50% 40%;
+    --accent: 280 50% 50%;
+    --destructive: 0 80% 50%;
+    --foreground: 0 0% 15%;
+    --muted-foreground: 0 0% 40%;
+  }
+
+  .high-contrast {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 80%;
+    --secondary-foreground: 0 0% 0%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+  }
+
+  /* Font Size Adjustments */
+  .font-size-small {
+    --font-size-base: 100%;
+  }
+
+  .font-size-medium {
+    --font-size-base: 112.5%;
+  }
+
+  .font-size-large {
+    --font-size-base: 125%;
+  }
+
+  .font-size-xlarge {
+    --font-size-base: 137.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-lora), serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-nunito), sans-serif;
+    font-weight: 700;
+  }
+
+  /* Focus visible styles for keyboard navigation */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  /* Skip link for screen readers */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

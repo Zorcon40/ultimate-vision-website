@@ -36,21 +36,21 @@ export function CinematicHeader() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/98 backdrop-blur-md border-b border-black/5 shadow-lg"
-            : "bg-white/90 border-b border-transparent"
+            ? "bg-white border-b border-black/5 shadow-lg"
+            : "bg-white border-b border-transparent"
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-16 w-auto">
+              <div className="relative h-24 w-auto">
                 <Image
                   src="/images/Logo/UV Full Logo.png"
                   alt="Ultimate Vision"
-                  width={240}
-                  height={64}
-                  className="h-16 w-auto object-contain"
+                  width={360}
+                  height={96}
+                  className="h-24 w-auto object-contain"
                   priority
                 />
               </div>

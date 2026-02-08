@@ -10,6 +10,11 @@ import { Button } from "@/components/ui/button";
 export function CinematicHero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
+  const defaultTestimonyVideoUrl =
+    "https://drive.google.com/uc?id=19l9z_C_ZK8-n6e3a4nBoaYNQYQfTBU3B";
+  const testimonyVideoUrl =
+    process.env.NEXT_PUBLIC_TESTIMONY_VIDEO_URL ?? defaultTestimonyVideoUrl;
+  const hasVideo = Boolean(testimonyVideoUrl);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -134,8 +139,9 @@ export function CinematicHero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white/20 text-white hover:bg-white/10 px-8 py-6 text-base"
-                onClick={() => setVideoOpen(true)}
+                className="border-white/20 text-white hover:bg-white/10 px-8 py-6 text-base disabled:opacity-50"
+                onClick={() => hasVideo && setVideoOpen(true)}
+                disabled={!hasVideo}
               >
                 <Play className="w-4 h-4 mr-2" />
                 Watch His Story
@@ -197,7 +203,7 @@ export function CinematicHero() {
 
       {/* Video Lightbox */}
       <AnimatePresence>
-        {videoOpen && (
+        {videoOpen && hasVideo && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -219,7 +225,7 @@ export function CinematicHero() {
                 <X className="w-6 h-6" />
               </button>
               <video
-                src="/videos/Testimony Full.mov"
+                src={testimonyVideoUrl}
                 controls
                 autoPlay
                 className="w-full h-full"

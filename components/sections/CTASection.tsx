@@ -26,7 +26,7 @@ export function CTASection() {
               Ready to See Your World <span className="text-gradient">Differently</span>?
             </h2>
             <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto">
-              Whether you're planning a corporate event, school assembly, or conference, Clark will create an experience your audience will never forget.
+              Whether you&apos;re planning a corporate event, school assembly, or conference, Clark will create an experience your audience will never forget.
             </p>
 
             {/* CTA Buttons */}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Play, ChevronDown, Sparkles, Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -174,7 +174,7 @@ export function CinematicHero() {
                   <div className="flex items-start gap-3">
                     <Quote className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
                     <p className="text-white/80 text-sm italic">
-                      "I may have lost my sight, but I gained a vision that transforms lives."
+                      &ldquo;I may have lost my sight, but I gained a vision that transforms lives.&rdquo;
                     </p>
                   </div>
                 </div>

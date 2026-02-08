@@ -80,11 +80,11 @@ export function ImpactSection() {
         >
           {[
             { quote: "Clark made me realize that my limitations were just stories I told myself.", author: "Sarah M.", role: "Student, University of Washington" },
-            { quote: "Best speaker we've ever had. Our team's mindset shifted permanently.", author: "David Chen", role: "VP, Microsoft" },
-            { quote: "He doesn't just inspire—he gives you the tools to see differently.", author: "Maria Rodriguez", role: "Principal, Lincoln High School" },
+            { quote: "Best speaker we&apos;ve ever had. Our team&apos;s mindset shifted permanently.", author: "David Chen", role: "VP, Microsoft" },
+            { quote: "He doesn&apos;t just inspire—he gives you the tools to see differently.", author: "Maria Rodriguez", role: "Principal, Lincoln High School" },
           ].map((item, i) => (
             <div key={i} className="p-6 rounded-xl bg-gradient-to-br from-white/[0.03] to-transparent border border-white/5">
-              <p className="text-white/70 italic mb-4">"{item.quote}"</p>
+              <p className="text-white/70 italic mb-4">&ldquo;{item.quote}&rdquo;</p>
               <div className="text-sm">
                 <span className="text-[#D4AF37] font-medium">{item.author}</span>
                 <span className="text-white/40"> • {item.role}</span>

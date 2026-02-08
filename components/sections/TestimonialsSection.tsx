@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    quote: "Clark's keynote at our annual conference was the highlight of the entire event. He doesn't just speak—he transforms the room. Six months later, employees are still referencing his message on seeing potential in others.",
+    quote: "Clark&apos;s keynote at our annual conference was the highlight of the entire event. He doesn&apos;t just speak—he transforms the room. Six months later, employees are still referencing his message on seeing potential in others.",
     author: "Jennifer Walsh",
     role: "Chief People Officer",
     company: "Salesforce",
     rating: 5,
   },
   {
-    quote: "I've booked hundreds of speakers over my career. Clark is in a category of his own. His ability to connect with our sales team and help them see past rejection was nothing short of remarkable.",
+    quote: "I&apos;ve booked hundreds of speakers over my career. Clark is in a category of his own. His ability to connect with our sales team and help them see past rejection was nothing short of remarkable.",
     author: "Marcus Thompson",
     role: "VP of Sales",
     company: "Oracle",
@@ -69,7 +69,7 @@ export function TestimonialsSection() {
             Words That <span className="text-gradient">Change</span> Lives
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what leaders, educators, and organizations say about working with Clark.
+            Don&apos;t just take our word for it. Here&apos;s what leaders, educators, and organizations say about working with Clark.
           </p>
         </motion.div>
 
@@ -100,7 +100,7 @@ export function TestimonialsSection() {
 
               {/* Quote */}
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 font-body">
-                "{testimonials[current].quote}"
+                &ldquo;{testimonials[current].quote}&rdquo;
               </p>
 
               {/* Author */}

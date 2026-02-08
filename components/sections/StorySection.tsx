@@ -8,7 +8,7 @@ const storyPoints = [
   {
     icon: Eye,
     title: "Losing Sight",
-    description: "At 24, Clark faced every person's nightmare—complete vision loss. But instead of surrendering to darkness, he discovered something extraordinary.",
+    description: "At 24, Clark faced every person&apos;s nightmare—complete vision loss. But instead of surrendering to darkness, he discovered something extraordinary.",
   },
   {
     icon: Target,
@@ -48,7 +48,7 @@ export function StorySection() {
             From <span className="text-gradient">Darkness</span> to Vision
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            The story of how one man's greatest challenge became his greatest gift to the world.
+            The story of how one person&apos;s greatest challenge became their greatest gift to the world.
           </p>
         </motion.div>
 
@@ -132,7 +132,7 @@ export function StorySection() {
               className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-[#D4AF37]/10 to-transparent border border-[#D4AF37]/20"
             >
               <p className="text-lg italic text-white/80 mb-4">
-                "I don't see with my eyes anymore—I see with my heart. And when you see with your heart, you see things that were invisible before."
+                &ldquo;I don&apos;t see with my eyes anymore—I see with my heart. And when you see with your heart, you see things that were invisible before.&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#F4E4BC]" />

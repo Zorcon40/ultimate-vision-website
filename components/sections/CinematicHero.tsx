@@ -10,11 +10,11 @@ import { Button } from "@/components/ui/button";
 export function CinematicHero() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
-  const defaultTestimonyVideoUrl =
-    "https://drive.google.com/uc?id=19l9z_C_ZK8-n6e3a4nBoaYNQYQfTBU3B";
-  const testimonyVideoUrl =
-    process.env.NEXT_PUBLIC_TESTIMONY_VIDEO_URL ?? defaultTestimonyVideoUrl;
-  const hasVideo = Boolean(testimonyVideoUrl);
+  const defaultTestimonyEmbedUrl =
+    "https://www.youtube.com/embed/TJpsy7nhOu8?si=Dj0M_QmceHUEUI-3";
+  const testimonyEmbedUrl =
+    process.env.NEXT_PUBLIC_TESTIMONY_VIDEO_URL ?? defaultTestimonyEmbedUrl;
+  const hasVideo = Boolean(testimonyEmbedUrl);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -224,10 +224,12 @@ export function CinematicHero() {
               >
                 <X className="w-6 h-6" />
               </button>
-              <video
-                src={testimonyVideoUrl}
-                controls
-                autoPlay
+              <iframe
+                src={testimonyEmbedUrl}
+                title="Watch Clark's Story"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 className="w-full h-full"
               />
             </motion.div>

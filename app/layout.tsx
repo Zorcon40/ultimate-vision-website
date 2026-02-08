@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CinematicHeader } from "@/components/layout/CinematicHeader";
 import { CinematicFooter } from "@/components/layout/CinematicFooter";
+import { AccessibilityToolbar } from "@/components/accessibility/AccessibilityToolbar";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
             {children}
           </main>
           <CinematicFooter />
+          <AccessibilityToolbar />
         </div>
       </body>
     </html>

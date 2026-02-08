@@ -78,15 +78,6 @@ export function StorySection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#161b2e]/80 via-transparent to-transparent" />
               </div>
 
-              {/* Floating Stat Card - Fixed position */}
-              <motion.div
-                className="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 bg-[#2D7A3A] border border-[#5BBF3A]/30 rounded-2xl p-4 lg:p-6 shadow-2xl z-10"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <div className="text-3xl lg:text-4xl font-bold text-[#5BBF3A] mb-1">2010</div>
-                <div className="text-xs lg:text-sm text-white/50">Vision Journey Began</div>
-              </motion.div>
             </div>
           </motion.div>
 

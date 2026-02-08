@@ -21,7 +21,7 @@ export function CinematicHero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#161b2e] pt-32 pb-16">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#161b2e] pt-44 pb-16">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Orbs */}
@@ -61,7 +61,7 @@ export function CinematicHero() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start w-full">
             {/* Left: Text Content */}
             <div>
               <motion.div
@@ -162,9 +162,9 @@ export function CinematicHero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isLoaded ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 1.2, delay: 0.3 }}
-              className="relative order-1 lg:order-2 flex items-center justify-center self-center"
+              className="relative order-1 lg:order-2 flex items-start justify-center"
             >
-              <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-none w-full">
+              <div className="relative max-w-md mx-auto lg:max-w-none w-full">
                 {/* Glow Effect Behind Image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#5BBF3A]/30 via-[#2D7A3A]/20 to-transparent rounded-3xl blur-3xl scale-95" />
                 {/* Image */}
@@ -174,7 +174,7 @@ export function CinematicHero() {
                     alt="Clark Roberts - Blind Speaker & Visionary"
                     width={600}
                     height={800}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover object-top"
                     priority
                   />
                   {/* Gradient Overlay */}

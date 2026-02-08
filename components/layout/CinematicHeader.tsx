@@ -41,28 +41,28 @@ export function CinematicHeader() {
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex h-28 items-center justify-between">
+          <div className="flex h-36 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-[120px] w-auto">
+              <div className="relative h-[180px] w-auto">
                 <Image
                   src="/images/Logo/UV Full Logo.png"
                   alt="Ultimate Vision"
-                  width={480}
-                  height={120}
-                  className="h-[120px] w-auto object-contain"
+                  width={720}
+                  height={180}
+                  className="h-[180px] w-auto object-contain"
                   priority
                 />
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative px-4 py-2 text-sm font-medium text-[#1B3A5C]/70 hover:text-[#1B3A5C] transition-colors group"
+                  className="relative px-5 py-2 text-lg font-medium text-[#1B3A5C]/70 hover:text-[#1B3A5C] transition-colors group"
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] group-hover:w-4/5 transition-all duration-300" />
@@ -74,14 +74,15 @@ export function CinematicHeader() {
             <div className="hidden lg:flex items-center gap-4">
               <a
                 href="tel:425-891-9008"
-                className="flex items-center gap-2 text-sm text-[#1B3A5C]/70 hover:text-[#1B3A5C] transition-colors"
+                className="flex items-center gap-2 text-lg text-[#1B3A5C]/70 hover:text-[#1B3A5C] transition-colors"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5" />
                 <span>425-891-9008</span>
               </a>
               <Button
                 asChild
-                className="bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] text-white hover:opacity-90 font-semibold"
+                size="lg"
+                className="bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] text-white hover:opacity-90 font-semibold text-lg px-6"
               >
                 <Link href="/contact">Book Now</Link>
               </Button>
@@ -93,7 +94,7 @@ export function CinematicHeader() {
               className="lg:hidden p-2 text-[#1B3A5C]"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
             </button>
           </div>
         </div>

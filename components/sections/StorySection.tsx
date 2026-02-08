@@ -135,7 +135,13 @@ export function StorySection() {
                 &ldquo;I don&apos;t see with my eyes anymore—I see with my heart. And when you see with your heart, you see things that were invisible before.&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2D7A3A] to-[#5BBF3A]" />
+                <Image
+                  src="/images/Headshots/Clark - Headshot.jpg"
+                  alt="Clark Roberts"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div>
                   <div className="font-semibold text-white">Clark Roberts</div>
                   <div className="text-sm text-white/50">Founder, Ultimate Vision</div>

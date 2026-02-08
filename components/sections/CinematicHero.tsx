@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, ChevronDown, Sparkles, Quote, X } from "lucide-react";
+import { Play, ChevronDown, Sparkles, Quote, X, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,7 @@ export function CinematicHero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#161b2e] pt-24 pb-12">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#161b2e] pt-32 pb-16">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Orbs */}
@@ -61,7 +61,6 @@ export function CinematicHero() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
-        <div className="min-h-[calc(100vh-160px)] flex items-center">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
             {/* Left: Text Content */}
             <div>
@@ -79,7 +78,7 @@ export function CinematicHero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isLoaded ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[0.95] mb-6"
+                className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.05] mb-6"
               >
                 <span className="block">Inspiring others</span>
                 <span className="block text-gradient">to see in new ways</span>
@@ -138,6 +137,25 @@ export function CinematicHero() {
                   Watch His Story
                 </Button>
               </motion.div>
+
+              {/* Newsletter */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className="mt-6"
+              >
+                <a
+                  href="https://mailchi.mp/121b6a8c06c8/ultimate-vision-newsletter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-[#5BBF3A] transition-colors group"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>Join our newsletter for updates</span>
+                  <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                </a>
+              </motion.div>
             </div>
 
             <motion.div
@@ -186,7 +204,6 @@ export function CinematicHero() {
               </div>
             </motion.div>
           </div>
-        </div>
       </div>
 
       {/* Video Lightbox */}

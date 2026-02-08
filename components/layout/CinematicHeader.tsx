@@ -41,16 +41,16 @@ export function CinematicHeader() {
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex h-20 items-center justify-between">
+          <div className="flex h-28 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-24 w-auto">
+              <div className="relative h-[120px] w-auto">
                 <Image
                   src="/images/Logo/UV Full Logo.png"
                   alt="Ultimate Vision"
-                  width={360}
-                  height={96}
-                  className="h-24 w-auto object-contain"
+                  width={480}
+                  height={120}
+                  className="h-[120px] w-auto object-contain"
                   priority
                 />
               </div>

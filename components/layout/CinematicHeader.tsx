@@ -41,7 +41,7 @@ export function CinematicHeader() {
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex h-36 items-center justify-between">
+          <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <div className="relative h-[180px] w-auto">

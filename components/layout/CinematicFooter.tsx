@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Youtube, Linkedin, Heart } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -33,28 +34,30 @@ export function CinematicFooter() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#F4E4BC] flex items-center justify-center">
-                <span className="text-[#0a0a0f] font-bold text-xl">UV</span>
-              </div>
-              <div>
-                <span className="font-display text-xl font-bold text-white block">Ultimate Vision</span>
-                <span className="text-xs text-white/40">Clark Roberts</span>
+              <div className="relative h-16 w-auto">
+                <Image
+                  src="/images/Logo/UV Full Logo.png"
+                  alt="Ultimate Vision"
+                  width={200}
+                  height={64}
+                  className="h-16 w-auto object-contain"
+                />
               </div>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               Inspiring organizations and individuals to see beyond limitations and discover their ultimate vision.
             </p>
             <div className="flex gap-4">
-              <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-colors">
+              <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#5BBF3A] hover:border-[#5BBF3A]/30 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-colors">
+              <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#5BBF3A] hover:border-[#5BBF3A]/30 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href={siteConfig.social.youtube} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-colors">
+              <a href={siteConfig.social.youtube} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#5BBF3A] hover:border-[#5BBF3A]/30 transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-colors">
+              <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#5BBF3A] hover:border-[#5BBF3A]/30 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -66,7 +69,7 @@ export function CinematicFooter() {
             <ul className="space-y-3">
               {footerLinks.explore.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-white/50 hover:text-[#D4AF37] transition-colors text-sm">
+                  <Link href={link.href} className="text-white/50 hover:text-[#5BBF3A] transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -80,7 +83,7 @@ export function CinematicFooter() {
             <ul className="space-y-3">
               {footerLinks.connect.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-white/50 hover:text-[#D4AF37] transition-colors text-sm">
+                  <Link href={link.href} className="text-white/50 hover:text-[#5BBF3A] transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -93,12 +96,12 @@ export function CinematicFooter() {
             <h3 className="text-white font-semibold mb-6">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="text-white/50">
-                <a href="tel:425-891-9008" className="hover:text-[#D4AF37] transition-colors">
+                <a href="tel:425-891-9008" className="hover:text-[#5BBF3A] transition-colors">
                   425-891-9008
                 </a>
               </li>
               <li className="text-white/50">
-                <a href="mailto:info@ultimate-vision.org" className="hover:text-[#D4AF37] transition-colors">
+                <a href="mailto:info@ultimate-vision.org" className="hover:text-[#5BBF3A] transition-colors">
                   info@ultimate-vision.org
                 </a>
               </li>
@@ -116,7 +119,7 @@ export function CinematicFooter() {
             © {new Date().getFullYear()} Ultimate Vision. All rights reserved.
           </p>
           <p className="text-white/40 text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-[#FF6B4A]" /> to inspire change
+            Made with <Heart className="w-4 h-4 text-[#5BBF3A]" /> to inspire change
           </p>
           <div className="flex gap-6 text-sm">
             {footerLinks.legal.map((link) => (

@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 
 export function CTASection() {
   return (
-    <section className="relative py-32 bg-[#0a0a0f] overflow-hidden">
+    <section className="relative py-24 lg:py-32 bg-[#161b2e] overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-[#FF6B4A]/5" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-[#D4AF37]/20 to-[#FF6B4A]/10 rounded-full blur-[150px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#2D7A3A]/10 via-transparent to-[#5BBF3A]/5" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-[#2D7A3A]/20 to-[#5BBF3A]/10 rounded-full blur-[150px]" />
       </div>
 
       <div className="relative container mx-auto px-4 lg:px-8">
@@ -34,7 +34,7 @@ export function CTASection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4BC] text-[#0a0a0f] hover:opacity-90 font-semibold px-10 py-6 text-base glow-gold"
+                className="bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] text-white hover:opacity-90 font-semibold px-10 py-6 text-base glow-green"
               >
                 <Link href="/contact" className="flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
@@ -59,19 +59,19 @@ export function CTASection() {
             <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div className="flex flex-col items-center gap-2 text-white/60">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-[#D4AF37]" />
+                  <Phone className="w-5 h-5 text-[#5BBF3A]" />
                 </div>
                 <span className="text-sm">425-891-9008</span>
               </div>
               <div className="flex flex-col items-center gap-2 text-white/60">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-[#D4AF37]" />
+                  <Mail className="w-5 h-5 text-[#5BBF3A]" />
                 </div>
                 <span className="text-sm">info@ultimate-vision.org</span>
               </div>
               <div className="flex flex-col items-center gap-2 text-white/60">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-[#D4AF37]" />
+                  <MapPin className="w-5 h-5 text-[#5BBF3A]" />
                 </div>
                 <span className="text-sm">Available Worldwide</span>
               </div>

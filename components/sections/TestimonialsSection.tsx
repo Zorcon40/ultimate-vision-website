@@ -50,10 +50,10 @@ export function TestimonialsSection() {
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section className="relative py-32 bg-[#0d0d12] overflow-hidden">
+    <section className="relative py-24 lg:py-32 bg-[#161b2e] overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-b from-[#D4AF37]/5 to-transparent rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-b from-[#2D7A3A]/5 to-transparent rounded-full blur-[100px]" />
       </div>
 
       <div className="relative container mx-auto px-4 lg:px-8">
@@ -84,8 +84,8 @@ export function TestimonialsSection() {
           <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-white/[0.05] to-white/[0.01] border border-white/10">
             {/* Quote Icon */}
             <div className="absolute -top-6 left-8">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#F4E4BC] flex items-center justify-center">
-                <Quote className="w-6 h-6 text-[#0a0a0f]" />
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#2D7A3A] to-[#5BBF3A] flex items-center justify-center">
+                <Quote className="w-6 h-6 text-white" />
               </div>
             </div>
 
@@ -94,7 +94,7 @@ export function TestimonialsSection() {
               {/* Stars */}
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonials[current].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#D4AF37] text-[#D4AF37]" />
+                  <Star key={i} className="w-5 h-5 fill-[#5BBF3A] text-[#5BBF3A]" />
                 ))}
               </div>
 
@@ -105,7 +105,7 @@ export function TestimonialsSection() {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#D4AF37]/30 to-[#FF6B4A]/20 border border-[#D4AF37]/30" />
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#2D7A3A]/30 to-[#5BBF3A]/20 border border-[#5BBF3A]/30" />
                 <div>
                   <div className="text-lg font-semibold text-white">
                     {testimonials[current].author}
@@ -145,7 +145,7 @@ export function TestimonialsSection() {
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`w-2 h-2 rounded-full transition-all ${
-                  i === current ? "w-8 bg-[#D4AF37]" : "bg-white/20 hover:bg-white/40"
+                  i === current ? "w-8 bg-[#5BBF3A]" : "bg-white/20 hover:bg-white/40"
                 }`}
               />
             ))}

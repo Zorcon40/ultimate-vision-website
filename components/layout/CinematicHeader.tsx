@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -35,20 +36,23 @@ export function CinematicHeader() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/5"
-            : "bg-transparent"
+            ? "bg-white/98 backdrop-blur-md border-b border-black/5 shadow-lg"
+            : "bg-white/90 border-b border-transparent"
         }`}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#F4E4BC] flex items-center justify-center">
-                <span className="text-[#0a0a0f] font-bold text-lg">UV</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="font-display text-xl font-bold text-white">Ultimate Vision</span>
-                <span className="block text-xs text-white/40 -mt-1">Clark Roberts</span>
+              <div className="relative h-16 w-auto">
+                <Image
+                  src="/images/Logo/UV Full Logo.png"
+                  alt="Ultimate Vision"
+                  width={240}
+                  height={64}
+                  className="h-16 w-auto object-contain"
+                  priority
+                />
               </div>
             </Link>
 
@@ -58,10 +62,10 @@ export function CinematicHeader() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-colors group"
+                  className="relative px-4 py-2 text-sm font-medium text-[#1B3A5C]/70 hover:text-[#1B3A5C] transition-colors group"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#FF6B4A] group-hover:w-4/5 transition-all duration-300" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] group-hover:w-4/5 transition-all duration-300" />
                 </Link>
               ))}
             </nav>
@@ -70,14 +74,14 @@ export function CinematicHeader() {
             <div className="hidden lg:flex items-center gap-4">
               <a
                 href="tel:425-891-9008"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+                className="flex items-center gap-2 text-sm text-[#1B3A5C]/70 hover:text-[#1B3A5C] transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 <span>425-891-9008</span>
               </a>
               <Button
                 asChild
-                className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4BC] text-[#0a0a0f] hover:opacity-90 font-semibold"
+                className="bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] text-white hover:opacity-90 font-semibold"
               >
                 <Link href="/contact">Book Now</Link>
               </Button>
@@ -86,7 +90,7 @@ export function CinematicHeader() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white"
+              className="lg:hidden p-2 text-[#1B3A5C]"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -139,7 +143,7 @@ export function CinematicHeader() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4BC] text-[#0a0a0f] hover:opacity-90 font-semibold px-8"
+                  className="bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] text-white hover:opacity-90 font-semibold px-8"
                 >
                   <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                     Book Clark Now

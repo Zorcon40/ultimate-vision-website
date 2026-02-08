@@ -12,11 +12,11 @@ const impactStats = [
 
 export function ImpactSection() {
   return (
-    <section id="impact" className="relative py-32 bg-[#0a0a0f] overflow-hidden">
+    <section id="impact" className="relative py-24 lg:py-32 bg-[#161b2e] overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-l from-[#D4AF37]/10 to-transparent rounded-full blur-[100px] -translate-y-1/2" />
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-gradient-to-tr from-[#FF6B4A]/5 to-transparent rounded-full blur-[80px]" />
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-l from-[#2D7A3A]/10 to-transparent rounded-full blur-[100px] -translate-y-1/2" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-gradient-to-tr from-[#5BBF3A]/5 to-transparent rounded-full blur-[80px]" />
       </div>
 
       <div className="relative container mx-auto px-4 lg:px-8">
@@ -28,9 +28,9 @@ export function ImpactSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF6B4A]/10 border border-[#FF6B4A]/30 mb-6">
-            <Sparkles className="w-4 h-4 text-[#FF6B4A]" />
-            <span className="text-sm font-medium text-[#FF6B4A]">Our Impact</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5BBF3A]/10 border border-[#5BBF3A]/30 mb-6">
+            <Sparkles className="w-4 h-4 text-[#5BBF3A]" />
+            <span className="text-sm font-medium text-[#5BBF3A]">Our Impact</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Measuring <span className="text-gradient-accent">Transformation</span>
@@ -51,9 +51,9 @@ export function ImpactSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.01] border border-white/10 hover:border-[#D4AF37]/30 transition-all duration-500 text-center h-full">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <stat.icon className="w-8 h-8 text-[#D4AF37]" />
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.01] border border-white/10 hover:border-[#5BBF3A]/30 transition-all duration-500 text-center h-full">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[#5BBF3A]/20 to-[#2D7A3A]/5 border border-[#5BBF3A]/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <stat.icon className="w-8 h-8 text-[#5BBF3A]" />
                 </div>
                 
                 <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
@@ -86,7 +86,7 @@ export function ImpactSection() {
             <div key={i} className="p-6 rounded-xl bg-gradient-to-br from-white/[0.03] to-transparent border border-white/5">
               <p className="text-white/70 italic mb-4">&ldquo;{item.quote}&rdquo;</p>
               <div className="text-sm">
-                <span className="text-[#D4AF37] font-medium">{item.author}</span>
+                <span className="text-[#5BBF3A] font-medium">{item.author}</span>
                 <span className="text-white/40"> • {item.role}</span>
               </div>
             </div>

@@ -10,55 +10,58 @@
   }
   
   .text-gradient {
-    background-image: linear-gradient(135deg, #D4AF37 0%, #F4E4BC 50%, #D4AF37 100%);
+    background-image: linear-gradient(135deg, #5BBF3A 0%, #2D7A3A 50%, #5BBF3A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .text-gradient-accent {
-    background-image: linear-gradient(135deg, #FF6B4A 0%, #FF8E6B 100%);
+    background-image: linear-gradient(135deg, #1B3A5C 0%, #2D7A3A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .glow-gold {
-    box-shadow: 0 0 60px rgba(212, 175, 55, 0.3), 0 0 100px rgba(212, 175, 55, 0.1);
+  .glow-green {
+    box-shadow: 0 0 60px rgba(91, 191, 58, 0.3), 0 0 100px rgba(91, 191, 58, 0.1);
   }
   
-  .glow-copper {
-    box-shadow: 0 0 60px rgba(255, 107, 74, 0.3), 0 0 100px rgba(255, 107, 74, 0.1);
+  .glow-navy {
+    box-shadow: 0 0 60px rgba(27, 58, 92, 0.4), 0 0 100px rgba(27, 58, 92, 0.2);
   }
 }
 
 @layer base {
   :root {
-    /* Ultimate Vision 2026 - Cinematic Dark Theme */
-    --background: 220 15% 8%;
+    /* Ultimate Vision - Logo Green & Navy Palette */
+    --background: 215 30% 13%;        /* Dark Navy #161b2e */
     --foreground: 0 0% 98%;
-    --card: 220 15% 10%;
+    --card: 215 30% 16%;
     --card-foreground: 0 0% 98%;
-    --popover: 220 15% 10%;
+    --popover: 215 30% 16%;
     --popover-foreground: 0 0% 98%;
     
-    --primary: 43 74% 52%;
-    --primary-foreground: 220 15% 8%;
+    /* Primary: Bright Green from logo */
+    --primary: 107 53% 49%;           /* #5BBF3A */
+    --primary-foreground: 0 0% 100%;
     
-    --secondary: 14 100% 60%;
+    /* Secondary: Dark Green from logo */
+    --secondary: 140 45% 33%;         /* #2D7A3A */
     --secondary-foreground: 0 0% 100%;
     
-    --accent: 14 100% 60%;
+    /* Accent: Navy Blue from logo */
+    --accent: 210 52% 24%;            /* #1B3A5C */
     --accent-foreground: 0 0% 100%;
     
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 215 25% 20%;
+    --muted-foreground: 215 15% 60%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 43 74% 52%;
+    --border: 215 25% 22%;
+    --input: 215 25% 18%;
+    --ring: 107 53% 49%;
     --radius: 0.5rem;
     
     --font-display: 'Playfair Display', serif;
@@ -67,11 +70,11 @@
     --font-size-base: 100%;
     --line-height-base: 1.6;
     
-    --chart-1: 43 74% 52%;
-    --chart-2: 14 100% 60%;
-    --chart-3: 220 15% 40%;
-    --chart-4: 45 80% 65%;
-    --chart-5: 14 80% 70%;
+    --chart-1: 107 53% 49%;
+    --chart-2: 140 45% 33%;
+    --chart-3: 210 52% 24%;
+    --chart-4: 107 45% 55%;
+    --chart-5: 140 40% 40%;
   }
 
   .high-contrast {

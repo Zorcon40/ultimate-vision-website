@@ -11,37 +11,37 @@ const speakingCategories = [
     title: "Corporate Keynotes",
     description: "Transform organizational culture with powerful messages on resilience, inclusion, and seeing potential in every team member.",
     topics: ["Leadership Through Adversity", "Building Inclusive Cultures", "Innovation Beyond Limits"],
-    color: "from-[#D4AF37] to-[#F4E4BC]",
+    color: "from-[#2D7A3A] to-[#5BBF3A]",
   },
   {
     icon: GraduationCap,
     title: "Schools & Universities",
     description: "Inspire the next generation to embrace challenges, practice compassion, and discover their unique vision for impact.",
     topics: ["Embracing Your Journey", "Kindness as Strength", "Potential Without Limits"],
-    color: "from-[#FF6B4A] to-[#FF8E6B]",
+    color: "from-[#5BBF3A] to-[#3A8C4A]",
   },
   {
     icon: Users,
     title: "Conferences & Events",
     description: "Elevate your event with a speaker who doesn't just talk—he creates transformational moments that audiences never forget.",
     topics: ["TED-Style Keynotes", "Panel Moderation", "Fireside Chats"],
-    color: "from-[#D4AF37] to-[#FF6B4A]",
+    color: "from-[#2D7A3A] to-[#3A8C4A]",
   },
   {
     icon: Mic2,
     title: "Virtual & Hybrid",
     description: "Engaging digital experiences that break through the screen barrier and create genuine connection with remote audiences.",
     topics: ["Live Virtual Keynotes", "Recorded Content", "Interactive Workshops"],
-    color: "from-[#F4E4BC] to-[#D4AF37]",
+    color: "from-[#5BBF3A] to-[#2D7A3A]",
   },
 ];
 
 export function SpeakingSection() {
   return (
-    <section id="speaking" className="relative py-32 bg-[#0d0d12] overflow-hidden">
+    <section id="speaking" className="relative py-24 lg:py-32 bg-[#161b2e] overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#D4AF37]/5 to-transparent rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#2D7A3A]/5 to-transparent rounded-full blur-[120px]" />
       </div>
 
       <div className="relative container mx-auto px-4 lg:px-8">
@@ -53,9 +53,9 @@ export function SpeakingSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 mb-6">
-            <Sparkles className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-sm font-medium text-[#D4AF37]">Speaking Engagements</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5BBF3A]/10 border border-[#5BBF3A]/30 mb-6">
+            <Sparkles className="w-4 h-4 text-[#5BBF3A]" />
+            <span className="text-sm font-medium text-[#5BBF3A]">Speaking Engagements</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Where Words <span className="text-gradient">Transform</span>
@@ -82,7 +82,7 @@ export function SpeakingSection() {
                 
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center flex-shrink-0`}>
-                    <category.icon className="w-7 h-7 text-[#0a0a0f]" />
+                    <category.icon className="w-7 h-7 text-[#161b2e]" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-gradient transition-colors">
@@ -107,7 +107,7 @@ export function SpeakingSection() {
                 <div className="mt-8 pt-6 border-t border-white/10">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[#D4AF37] hover:gap-4 transition-all"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#5BBF3A] hover:gap-4 transition-all"
                   >
                     Inquire About Availability
                     <ArrowRight className="w-4 h-4" />
@@ -129,7 +129,7 @@ export function SpeakingSection() {
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4BC] text-[#0a0a0f] hover:opacity-90 font-semibold px-10 py-6 text-base glow-gold"
+            className="bg-gradient-to-r from-[#2D7A3A] to-[#5BBF3A] text-white hover:opacity-90 font-semibold px-10 py-6 text-base glow-green"
           >
             <Link href="/contact">
               Book Clark for Your Event

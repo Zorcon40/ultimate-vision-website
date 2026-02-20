@@ -38,7 +38,7 @@ const speakingCategories = [
 
 export function SpeakingSection() {
   return (
-    <section id="speaking" className="relative py-24 lg:py-32 bg-[#161b2e] overflow-hidden">
+    <section id="speaking" className="relative py-16 lg:py-20 bg-[#161b2e] overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#2D7A3A]/5 to-transparent rounded-full blur-[120px]" />

@@ -24,7 +24,7 @@ const storyPoints = [
 
 export function StorySection() {
   return (
-    <section id="story" className="relative py-24 lg:py-32 bg-[#161b2e] overflow-hidden">
+    <section id="story" className="relative py-24 lg:py-24 bg-[#161b2e] overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-gradient-to-r from-[#2D7A3A]/5 to-transparent rounded-full blur-[100px] -translate-y-1/2" />
